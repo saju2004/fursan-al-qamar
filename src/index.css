@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+
+  body {
+    @apply bg-white text-slate-800 antialiased;
+  }
+}
+
+/* Custom Architectural Blueprint Grid */
+.bg-blueprint-grid {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(11, 19, 43, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(11, 19, 43, 0.04) 1px, transparent 1px);
+}
+
+.bg-blueprint-grid-gold {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(181, 137, 46, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(181, 137, 46, 0.06) 1px, transparent 1px);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F8F9FB;
+}
+::-webkit-scrollbar-thumb {
+  background: #B5892E;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #9A7222;
+}
+
+/* Pulsing Badge & Floating Effect */
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+}
+
+.animate-float-slow {
+  animation: floatSlow 5s ease-in-out infinite;
+}
